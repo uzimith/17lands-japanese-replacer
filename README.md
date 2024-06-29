@@ -15,8 +15,10 @@ cat all-cards.json | jq -c '[.[] | select(.lang == "ja" or .lang == "en") | {
     name: .name,
     printed_name: .printed_name,
     oracle_id: .oracle_id,
+    set: .set,
     set_id: .set_id,
     image_uris: { large: .image_uris.large },
-    card_faces: .card_faces
+    card_faces: .card_faces,
+    scryfall_uri: .scryfall_uri
 }]' | sponge all-cards.json
 ```

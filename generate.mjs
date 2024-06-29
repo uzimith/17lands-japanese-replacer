@@ -7,10 +7,41 @@ const cardNameMap = {};
 const japaneseCardMap = new Map();
 data.forEach((card) => {
   if (card.lang === "ja") {
+    // for image
     const key = `${card.oracle_id}-${card.set_id}`;
     japaneseCardMap.set(key, card);
     const subKey = `${card.oracle_id}`;
     japaneseCardMap.set(subKey, card);
+
+    // for name
+    if (card.printed_name && card.name !== card.printed_name) {
+      cardNameMap[card.name] = card.printed_name;
+    }
+    if (card.card_faces) {
+      for (const face of card.card_faces) {
+        // scryfall data error case
+        if (card.name === face.printed_name) {
+          continue;
+        }
+        if (face.printed_name && face.name !== face.printed_name) {
+          cardNameMap[face.name] = face.printed_name;
+        }
+      }
+
+      const printedNames = card.card_faces
+        .map((face) => {
+          // scryfall data error case
+          if (card.name === face.printed_name) {
+            return null;
+          }
+
+          return face.printed_name;
+        })
+        .filter((name) => name);
+      if (printedNames.length > 0 && card.name !== printedNames.join(" // ")) {
+        cardNameMap[card.name] = printedNames.join(" // ");
+      }
+    }
   }
 });
 
@@ -21,9 +52,6 @@ data.forEach((card) => {
     const japaneseCard =
       japaneseCardMap.get(key) || japaneseCardMap.get(subKey);
 
-    if (japaneseCard && japaneseCard.printed_name) {
-      cardNameMap[card.name] = japaneseCard.printed_name;
-    }
     if (
       japaneseCard &&
       japaneseCard.image_uris &&
@@ -43,19 +71,6 @@ data.forEach((card) => {
             cardImageMap[card.id].back = face.image_uris.large;
           }
         }
-
-        if (face.printed_name) {
-          cardNameMap[face.name] = face.printed_name;
-        }
-      }
-
-      const printedNames = japaneseCard.card_faces
-        .map((face) => {
-          return face.printed_name;
-        })
-        .filter((name) => name);
-      if (printedNames.length > 0) {
-        cardNameMap[card.name] = printedNames.join(" // ");
       }
     }
   }
