@@ -49,6 +49,11 @@ function startObserver() {
         replaceCardContent(mutation.addedNodes);
       } else if (mutation.type === "characterData") {
         replaceCardContent([mutation.target]);
+      } else if (
+        mutation.type === "attributes" &&
+        mutation.attributeName === "src"
+      ) {
+        replaceCardContent([mutation.target]);
       }
     });
   });
@@ -57,5 +62,7 @@ function startObserver() {
     childList: true,
     subtree: true,
     characterData: true,
+    attributes: true,
+    attributeFilter: ["src"],
   });
 }
