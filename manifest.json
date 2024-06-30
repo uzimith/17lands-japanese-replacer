@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "17Lands Japanese Replacer",
-  "version": "1.0",
+  "version": "1.1",
   "web_accessible_resources": [
     {
       "resources": [
@@ -14,6 +14,17 @@
     }
   ],
   "content_scripts": [
+    {
+      "matches": [
+        "https://www.17lands.com/deck_color_data"
+      ],
+      "js": [
+        "style.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    },
     {
       "matches": [
         "https://www.17lands.com/*"

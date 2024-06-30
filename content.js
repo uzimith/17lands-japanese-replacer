@@ -47,6 +47,8 @@ function startObserver() {
     mutations.forEach((mutation) => {
       if (mutation.type === "childList") {
         replaceCardContent(mutation.addedNodes);
+      } else if (mutation.type === "characterData") {
+        replaceCardContent([mutation.target]);
       }
     });
   });
@@ -54,5 +56,6 @@ function startObserver() {
   observer.observe(document.body, {
     childList: true,
     subtree: true,
+    characterData: true,
   });
 }

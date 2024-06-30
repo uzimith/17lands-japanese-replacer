@@ -1,0 +1,27 @@
+.W { background-image: linear-gradient(to right, transparent 70%, #F9FAF4 70%); }
+.U { background-image: linear-gradient(to right, transparent 70%, #0E68AB 70%); }
+.B { background-image: linear-gradient(to right, transparent 70%, #150B00 70%); }
+.R { background-image: linear-gradient(to right, transparent 70%, #D3202A 70%); }
+.G { background-image: linear-gradient(to right, transparent 70%, #00733E 70%); }
+
+.WU { background-image: linear-gradient(to right, transparent 70%, #F9FAF4 70%, #F9FAF4 85%, #0E68AB 85%); }
+.UB { background-image: linear-gradient(to right, transparent 70%, #0E68AB 70%, #0E68AB 85%, #150B00 85%); }
+.BR { background-image: linear-gradient(to right, transparent 70%, #150B00 70%, #150B00 85%, #D3202A 85%); }
+.RG { background-image: linear-gradient(to right, transparent 70%, #D3202A 70%, #D3202A 85%, #00733E 85%); }
+.GW { background-image: linear-gradient(to right, transparent 70%, #00733E 70%, #00733E 85%, #F9FAF4 85%); }
+.WB { background-image: linear-gradient(to right, transparent 70%, #F9FAF4 70%, #F9FAF4 85%, #150B00 85%); }
+.BG { background-image: linear-gradient(to right, transparent 70%, #150B00 70%, #150B00 85%, #00733E 85%); }
+.GU { background-image: linear-gradient(to right, transparent 70%, #00733E 70%, #00733E 85%, #0E68AB 85%); }
+.UR { background-image: linear-gradient(to right, transparent 70%, #0E68AB 70%, #0E68AB 85%, #D3202A 85%); }
+.RW { background-image: linear-gradient(to right, transparent 70%, #D3202A 70%, #D3202A 85%, #F9FAF4 85%); }
+
+.WUR { background-image: linear-gradient(to right, transparent 70%, #F9FAF4 70%, #F9FAF4 80%, #0E68AB 80%, #0E68AB 90%, #D3202A 90%); }
+.UBG { background-image: linear-gradient(to right, transparent 70%, #0E68AB 70%, #0E68AB 80%, #150B00 80%, #150B00 90%, #00733E 90%); }
+.BRW { background-image: linear-gradient(to right, transparent 70%, #150B00 70%, #150B00 80%, #D3202A 80%, #D3202A 90%, #F9FAF4 90%); }
+.RGU { background-image: linear-gradient(to right, transparent 70%, #D3202A 70%, #D3202A 80%, #00733E 80%, #00733E 90%, #0E68AB 90%); }
+.GWB { background-image: linear-gradient(to right, transparent 70%, #00733E 70%, #00733E 80%, #F9FAF4 80%, #F9FAF4 90%, #150B00 90%); }
+.WUB { background-image: linear-gradient(to right, transparent 70%, #F9FAF4 70%, #F9FAF4 80%, #0E68AB 80%, #0E68AB 90%, #150B00 90%); }
+.UBR { background-image: linear-gradient(to right, transparent 70%, #0E68AB 70%, #0E68AB 80%, #150B00 80%, #150B00 90%, #D3202A 90%); }
+.BRG { background-image: linear-gradient(to right, transparent 70%, #150B00 70%, #150B00 80%, #D3202A 80%, #D3202A 90%, #00733E 90%); }
+.RGW { background-image: linear-gradient(to right, transparent 70%, #D3202A 70%, #D3202A 80%, #00733E 80%, #00733E 90%, #F9FAF4 90%); }
+.GWU { background-image: linear-gradient(to right, transparent 70%, #00733E 70%, #00733E 80%, #F9FAF4 80%, #F9FAF4 90%, #0E68AB 90%); }
