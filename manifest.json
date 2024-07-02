@@ -1,7 +1,8 @@
 {
   "manifest_version": 3,
   "name": "17Lands Japanese Replacer",
-  "version": "1.3",
+  "description": "17Landsの画像とカード名を日本語のものに置き換えます。",
+  "version": "1.4",
   "icons": {
     "16": "16.png",
     "48": "48.png",
